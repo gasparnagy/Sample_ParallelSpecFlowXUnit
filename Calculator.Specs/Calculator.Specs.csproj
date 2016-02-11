@@ -63,6 +63,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Multiplication.feature.cs">
+      <DependentUpon>Multiplication.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Calculator.cs" />
     <Compile Include="Addition.feature.cs">
       <AutoGen>True</AutoGen>
@@ -73,6 +78,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Multiplication.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Multiplication.feature.cs</LastGenOutput>
+    </None>
     <None Include="App.config" />
     <None Include="Addition.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

@@ -24,5 +24,10 @@ namespace Calculator.Specs
         {
             operands.Push(operands.Pop() + operands.Pop());
         }
+
+        public void Multiply()
+        {
+            operands.Push(operands.Pop() * operands.Pop());
+        }
     }
 }

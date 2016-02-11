@@ -7,7 +7,7 @@ namespace Calculator.Specs
     [Binding]
     public class CalculatorSteps
     {
-        private Calculator calculator = new Calculator();
+        private readonly Calculator calculator = new Calculator();
 
         [Given(@"I have entered (.*) into the calculator")]
         public void GivenIHaveEnteredIntoTheCalculator(int operand)
@@ -20,7 +20,13 @@ namespace Calculator.Specs
         {
             calculator.Add();
         }
-        
+
+        [When(@"I press multiply")]
+        public void WhenIPressMultiply()
+        {
+            calculator.Multiply();
+        }
+
         [Then(@"the result should be (.*) on the screen")]
         public void ThenTheResultShouldBeOnTheScreen(int expectedResult)
         {
